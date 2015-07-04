@@ -7,5 +7,11 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.paths << Emoji.images_path
 
 # Precompile additional assets.
+Rails.application.config.assets.precompile += %w( quiz.css )
+Rails.application.config.assets.precompile += %w( home.css )
+Rails.application.config.assets.precompile += %w( quiz.js )
+Rails.application.config.assets.precompile += %w( question.js )
+Rails.application.config.assets.precompile += %w( quiz_ui.js )
+Rails.application.config.assets.precompile += %w( app.js )
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
