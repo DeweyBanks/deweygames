@@ -31,4 +31,19 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+   config.model Question do
+    edit do
+      field :subject do
+        required true
+      end
+      field :body do
+        required true
+      end
+      field :answers do
+        required true
+      end
+    end
+  end
+
 end
