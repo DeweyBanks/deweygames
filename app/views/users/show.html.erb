@@ -1,0 +1,12 @@
+<%= render 'shared/header' %>
+
+<section>
+
+<div class="user">
+  <h1><%= @user.name %> </h1>
+  <span> <%= @user.email %></span><br><br>
+</div>
+
+<button><%= link_to 'Edit', edit_user_path(@user) %></button>
+<button><%= link_to 'Logout', sessions_path, method: :delete %></button>
+</section>

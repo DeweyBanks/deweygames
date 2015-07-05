@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -7,8 +9,9 @@ Rails.application.routes.draw do
    root 'home#index'
    get '/about', to: 'home#about'
    get '/quiz', to:  'welcome#quiz'
-
-
+   resources :users
+   get "/login" => "sessions#new"
+   resource  :sessions, only: [:create, :destroy]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
