@@ -1,5 +1,12 @@
 
 <%= render 'shared/header' %>
+
+<% if flash[:notice] %>
+    <div id="notice" style="color: #D8000C;
+    background-color: #FFBABA;">
+      <h1><%= flash[:notice] %></h1>
+    </div>
+<% end %>
 <section>
 <h2>User List</h2>
 <table id="usersTable">

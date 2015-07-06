@@ -1,5 +1,12 @@
 <%= render 'shared/header' %>
 
+<% if flash[:notice] %>
+    <div id="notice" style="color: #D8000C;
+    background-color: #FFBABA;">
+      <h1><%= flash[:notice] %></h1>
+    </div>
+<% end %>
+
 <section>
 
 <div class="user">
@@ -8,5 +15,5 @@
 </div>
 
 <button><%= link_to 'Edit', edit_user_path(@user) %></button>
-<button><%= link_to 'Logout', sessions_path, method: :delete %></button>
+<button><%= link_to "Logout", logout_path %></button>
 </section>

@@ -11,7 +11,8 @@ Rails.application.routes.draw do
    get '/quiz', to:  'welcome#quiz'
    resources :users
    get "/login" => "sessions#new"
-   resource  :sessions, only: [:create, :destroy]
+   resource  :session, only: [:create, :destroy]
+   get "/logout" => "sessions#destroy"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
