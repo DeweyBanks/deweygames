@@ -1,3 +1,8 @@
 <%= render "shared/header" %>
+<% if flash[:notice] %>
+    <div class="flash-message <%= notice ? "notice" : ""%><%= alert ? "error" : ""%>">
+      <h1><%= flash[:notice] %></h1>
+    </div>
+<% end %>
 <h1>About</h1>
 <%= render "shared/footer" %>

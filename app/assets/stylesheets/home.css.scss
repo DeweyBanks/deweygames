@@ -8,6 +8,18 @@ body {
   height: 100%;
 }
 
+.flash-message {
+  border: solid 4px #900;
+  background-color: white;
+  color: black;
+  z-index: 999;
+  position: fixed;
+  font-weight: bold;
+  width: 96%;
+  margin: 20px;
+  font-size: 110%;
+}
+
 header {
   padding: 10px;
 }

@@ -10,7 +10,7 @@ class WelcomeController < ActionController::Base
 protected
   def authenticate_user!
     unless logged_in?
-      redirect_to login_path, :notice => 'You must be signed in to take the quiz'
+      redirect_to login_path, :flash => { :error => 'You must be signed in to take the quiz' }
     end
   end
 

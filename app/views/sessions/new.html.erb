@@ -1,13 +1,8 @@
 <%= render ('shared/header') %>
 
-<% if flash[:notice] %>
-    <div id="notice" style="color: #D8000C;
-    background-color: #FFBABA;">
-      <h1><%= flash[:notice] %></h1>
-    </div>
-<% end %>
 
-<div>
+
+<div id="content">
   <div class="form" id="login">
   <h2>Sign In</h2>
 </br>
@@ -17,10 +12,21 @@
       <%= password_field_tag :password, nil, placeholder: 'Password' %><br/><br/>
       <%= submit_tag('Login', :class => "btn btn-primary") %>
     <% end %>
-    <p style="color: red"><%= flash[:error] %></p>
   </div>
     <%= link_to('Sign up', new_user_path) %>
   </div>
+
+  <% if flash[:error] %>
+    <div class="flash-message">
+      <h1><%= flash[:error] %></h1>
+    </div>
+  <% end %>
+
+  <% if flash[:notice] %>
+    <div class="flash-message">
+      <h1><%= flash[:notice] %></h1>
+    </div>
+  <% end %>
 
 </div>
 

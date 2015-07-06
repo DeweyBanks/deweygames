@@ -2,8 +2,7 @@
 <%= render 'shared/header' %>
 
 <% if flash[:notice] %>
-    <div id="notice" style="color: #D8000C;
-    background-color: #FFBABA;">
+    <div class="flash-message">
       <h1><%= flash[:notice] %></h1>
     </div>
 <% end %>
